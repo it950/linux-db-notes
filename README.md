@@ -10,7 +10,7 @@
 3. Config [mtk](https://www.enterprisedb.com/docs/migration_toolkit/latest/) properties file in: C:\Program Files\edb\mtk\etc\toolkit.properties.properties
     ## Properties for sqlserver
     ``` sh
-    SRC_DB_URL=jdbc:jtds:sqlserver://192.168.1.155:1433/your_source_db_name
+    SRC_DB_URL=jdbc:jtds:sqlserver://127.0.0.1:1433/your_source_db_name
     SRC_DB_USER=your_source_db_user_id
     SRC_DB_PASSWORD=your_source_db_password
     TARGET_DB_URL=jdbc:postgresql://127.0.0.1:5432/your_target_db_name
@@ -20,7 +20,7 @@
 
     ## Properties for sqlserver express    
     ``` sh
-    SRC_DB_URL=jdbc:jtds:sqlserver://192.168.1.155:1433/your_source_db_name;instance=SQLEXPRESS
+    SRC_DB_URL=jdbc:jtds:sqlserver://127.0.0.1:1433/your_source_db_name;instance=SQLEXPRESS
     SRC_DB_USER=your_source_db_user_id
     SRC_DB_PASSWORD=your_source_db_password
     TARGET_DB_URL=jdbc:postgresql://127.0.0.1:5432/your_target_db_name
