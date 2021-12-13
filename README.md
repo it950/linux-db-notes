@@ -7,7 +7,7 @@
     > You can use **Aplication stack builder** to download this tool kit
     >
     > This tools has been installed if you tick it in Postgresql installation progress
-3. Config tookit properties file in: C:\Program Files\edb\mtk\etc\toolkit.properties.properties
+3. Config [tookit](https://www.enterprisedb.com/docs/migration_toolkit/latest/) properties file in: C:\Program Files\edb\mtk\etc\toolkit.properties.properties
     ## Properties for sqlserver
     ``` sh
     SRC_DB_URL=jdbc:jtds:sqlserver://192.168.1.155:1433/your_source_db_name
