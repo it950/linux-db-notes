@@ -38,6 +38,9 @@
     ``` sh
     runMTK.bak -sourcedbtype sqlserver -targetdbtype postgres -targetschema public dbo
     ```
+    > If you want to migrate specified tables as below, table list is a comma-separated list
+    >
+    > runMTK.bak -sourcedbtype sqlserver -targetdbtype postgres -targetschema public dbo -tables table1,table2
 
   
 
