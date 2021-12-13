@@ -3,10 +3,10 @@
     ``` sh
     java -version
     ```
-2. Install edb(enterprise database) mtk(migrate took kit),
-    > You can use **Aplication stack builder** to download this tool kit
+2. Install edb(enterprise database) [mtk](https://www.enterprisedb.com/docs/migration_toolkit/latest),
+    > You can use **Aplication stack builder** to install this tool kit
     >
-    > This tools has been installed if you tick it in Postgresql installation progress
+    > This tool has been installed if you tick it in Postgresql installation progress
 3. Config [tookit](https://www.enterprisedb.com/docs/migration_toolkit/latest/) properties file in: C:\Program Files\edb\mtk\etc\toolkit.properties.properties
     ## Properties for sqlserver
     ``` sh
@@ -44,5 +44,5 @@
     ``` sh
     runMTK.bak -sourcedbtype sqlserver -targetdbtype postgres -targetschema public dbo -tables table1,table2
     ```
-  
+6. View the logs in **C:\Users\your_windows_user_name\.enterprisedb\migration-toolkit\logs** to check if there are some errors.  
 
