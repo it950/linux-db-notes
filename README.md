@@ -42,7 +42,7 @@
     
     ## Migrate specified tables by option **-tables**, table list is a comma-separated list
     ``` sh
-    runMTK.bak -sourcedbtype sqlserver -targetdbtype postgres -targetschema public dbo -tables table1,table2
+    runMTK.bak -sourcedbtype sqlserver -targetdbtype postgres -targetschema public -tables table1,table2 dbo
     ```
 6. View the logs in **%HOMEDRIVE%%HOMEPATH%\.enterprisedb\migration-toolkit\logs** to check if there are some errors.
 7. Other reference:
