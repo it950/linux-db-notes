@@ -34,13 +34,15 @@
     * postgresql-42.3.1.jar    
     * jtds-1.3.1.jar
 
-5. Open the command as an **administrator**, and go to the folder: C:\Program Files\edb\mtk\bin, run the command:     
+5. Open the command as an **administrator**, and go to the folder: C:\Program Files\edb\mtk\bin, run the command: 
+    ## Migrate all tables
     ``` sh
     runMTK.bak -sourcedbtype sqlserver -targetdbtype postgres -targetschema public dbo
     ```
-    > If you want to migrate specified tables as below, table list is a comma-separated list
-    >
-    > runMTK.bak -sourcedbtype sqlserver -targetdbtype postgres -targetschema public dbo -tables table1,table2
-
+    
+    ## Migrate specified tables by option **-tables**, table list is a comma-separated list
+    ``` sh
+    runMTK.bak -sourcedbtype sqlserver -targetdbtype postgres -targetschema public dbo -tables table1,table2
+    ```
   
 
