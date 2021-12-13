@@ -45,4 +45,7 @@
     runMTK.bak -sourcedbtype sqlserver -targetdbtype postgres -targetschema public dbo -tables table1,table2
     ```
 6. View the logs in **C:\Users\your_windows_user_name\.enterprisedb\migration-toolkit\logs** to check if there are some errors.  
+7. Other reference:
+    * [migrate-MSSQL-to-PostgreSQL-MTK](https://rainmakerho.github.io/2021/02/09/migrate-MSSQL-to-PostgreSQL-MTK/)
+    * [migrating-database-from-sql-server-mssql-to-postgresql](https://dev.to/abhinavgupta1997/migrating-database-from-sql-server-mssql-to-postgresql-1mje)
 
