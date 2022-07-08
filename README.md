@@ -29,7 +29,8 @@
     ```
     > if you use sqlexpress, you must enable **Sql Server Browser** in service
     > 
-    > if you use sqlexpress, you must enable **TCP/IP** client protocol by Sql Configuration Manager
+    > if you use sqlexpress, you must enable **TCP/IP** client protocol by Sql Configuration Manager, **THIS IS VERY IMPORTANT!!!**
+    ![Enable TCP/IP](https://user-images.githubusercontent.com/15027134/178036703-acbad14a-2f9f-4891-a798-b444914ce803.png)
 4. Copy db drivers to C:\Program Files\edb\mtk\lib, this driver can be download from [this repos](https://github.com/it950/migrate-sqlserver-to-postgresql/tree/main/drivers),
     * postgresql-42.3.1.jar    
     * jtds-1.3.1.jar
