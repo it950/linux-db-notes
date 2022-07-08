@@ -37,12 +37,12 @@
 5. Open the command as an **administrator**, and go to the folder: C:\Program Files\edb\mtk\bin, run the command: 
     ## Migrate all tables
     ``` sh
-    runMTK.bak -sourcedbtype sqlserver -targetdbtype postgres -targetschema public dbo
+    .\runMTK.bat -sourcedbtype sqlserver -targetdbtype postgres -targetschema public dbo
     ```
     
     ## Migrate specified tables by option **-tables**, table list is a comma-separated list
     ``` sh
-    runMTK.bak -sourcedbtype sqlserver -targetdbtype postgres -targetschema public -tables table1,table2 dbo
+    .\runMTK.bat -sourcedbtype sqlserver -targetdbtype postgres -targetschema public -tables table1,table2 dbo
     ```
 6. View the logs in **%HOMEDRIVE%%HOMEPATH%\.enterprisedb\migration-toolkit\logs** to check if there are some errors.
 7. Other reference:
