@@ -1,1 +1,1 @@
-# Notes for PostgreSQL
+# Notes for PostgreSQL and SqlServer
