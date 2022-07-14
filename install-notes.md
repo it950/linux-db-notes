@@ -7,6 +7,7 @@
 - [ ] Transfer backup files from remote server to local server
 - [ ] Restore backup files
 - [ ] Change data forder to another location of server
+- [ ] View the network of Linux
 
 # Install
 ``` shell
