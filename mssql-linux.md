@@ -1,4 +1,4 @@
-# Instll mssql on docker
+# Windows 11 Pro WSL instll mssql on docker
 
 ## Reference
 [mssql docker image](https://hub.docker.com/_/microsoft-mssql-server)
@@ -41,7 +41,7 @@ docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Your@Password" -e "MSSQL_PID=Stand
 >
 
 
-## How to restore a `backup` for mssql which run on docker
+## How to restore a `backup` to a mounted folder for mssql which run on docker
 
 1. Fist stop the container
 ```bash
@@ -82,6 +82,8 @@ RESTORE DATABASE Learn
 ```
 
 4. Or use `SQL Server Management Studio` to restore a database to a `mounted folder`
+
+
 > [!IMPORTANT]
 > Must create a empty database firstly, otherwise an error will throw if directly restore.
 > Msg 3634, Level 16, State 1, Line 2
