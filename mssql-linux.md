@@ -1,11 +1,44 @@
 # Windows 11 Pro WSL instll mssql on docker
 
+## Docker command frequently used
+   ```bash
+   # In the bash execute the following command, its very nice
+   docker exec -it sqlstandard-2019 bash
+
+   docker pull mcr.microsoft.com/mssql/server:<image_tag>
+
+   docker stop
+
+   docker rm
+
+   docker commit -m 'message'
+
+   docker build -t new-image-name:1.0
+
+   docker-compose -f up -d .
+
+   docker volume ls
+
+   docker volume rm
+
+   docker ps -a
+
+   docker cp d6b75213ef80:/var/opt/mssql/log/errorlog /tmp/errorlog
+
+   docker save
+   docker load
+   docker export
+   docker import
+
+   ```
+
 ## Reference
 [mssql docker image](https://hub.docker.com/_/microsoft-mssql-server)
 
 [tutorial-restore-backup-in-sql-server-container](https://docs.microsoft.com/en-us/sql/linux/tutorial-restore-backup-in-sql-server-container?view=sql-server-ver16)
 
 [how-to-use-a-docker-host-folder-for-a-sql-server-database](https://theserogroup.com/how-to-use-a-docker-host-folder-for-a-sql-server-database/)
+[sql-server-linux-docker-container-configure](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-docker-container-configure?view=sql-server-linux-ver15&pivots=cs1-bash#persist)
 
 > [!IMPORTANT]
 > Do not change the port that mssql run on docker
@@ -30,9 +63,28 @@
 
 ---
 
+## How to set timezone
+1. Run command in container
+   ```bash
+   tzselect
+   ```
+
+2. Set environment when execute docker run command
+   ```bash
+   -e "TZ=Asia/Shanghai"
+   ```
+
 ## How to change mssql `default server collation`
 
 > The default value is: `SQL_Latin1_General_CP1_CI_AS`
+
+> Set environment in docker run: [-e "MSSQL_COLLATION=Chinese_PRC_CI_AS"](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-configure-environment-variables?view=sql-server-linux-ver15)
+
+> Use `mssql-conf setup` with configured environment variables
+
+   ```bash
+   sudo ACCEPT_EULA='Y' MSSQL_PID='Developer' MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' MSSQL_COLLATION='Chinese_PRC_CI_AS' MSSQL_TCP_PORT=1401 /opt/mssql/bin/mssql-conf setup
+   ```
 
 
 ## Performance optimization for mssql
