@@ -17,6 +17,8 @@
 
    docker-compose -f up -d .
 
+   docker-compose down
+
    docker volume ls
 
    docker volume rm
